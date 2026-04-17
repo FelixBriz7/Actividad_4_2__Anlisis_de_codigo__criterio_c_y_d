@@ -18,7 +18,7 @@ public class Persona {
         try {
             Verificador.checkEsNegativo(edad);
             this.edad = edad;
-        } catch (RuntimeException ex) {
+        } catch (IllegalArgumentException ex) {
             throw new IllegalArgumentException("La edad debe ser positiva", ex);
         }        
     }
