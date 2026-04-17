@@ -2,6 +2,8 @@
 package ar.charlycimino.ejemplos.excepcionespropias;
 
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -11,16 +13,16 @@ import java.util.Scanner;
  */
 public class Test9 {
 
-    /*
-      Manejo de excepciones propias
-    */
+    private static final Logger LOGGER = Logger.getLogger(Test9.class.getName());
+
+    @SuppressWarnings("java:S1172")
     public static void main(String[] args) {
-        int y, z;
-        System.out.print("Ingrese y: ");
+        int y;
+        int z;
+        LOGGER.info("Ingrese y: ");
         y = new Scanner(System.in).nextInt();
         z = new Calculadora().factorial(y);
-        System.out.println("Resultado: " + z);
-        System.out.println("Adiós!");
+        LOGGER.log(Level.INFO, "Resultado: {0}", z);
+        LOGGER.info("Adiós!");
     }
-
 }
