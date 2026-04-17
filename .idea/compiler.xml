@@ -9,5 +9,6 @@
         <module name="Actividad_4_2__Anlisis_de_codigo__criterio_c_y_d" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel target="21" />
   </component>
 </project>

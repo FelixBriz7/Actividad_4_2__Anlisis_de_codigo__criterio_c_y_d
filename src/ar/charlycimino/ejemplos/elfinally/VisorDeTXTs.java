@@ -26,9 +26,11 @@ public class VisorDeTXTs {
             throw new RuntimeException("Error inesperado en el catch");
         } finally {
             try {
-                br.close();
+                if (br != null) {
+                    br.close();
+                }
             } catch (IOException ex) {
-                System.out.println("No se pudo liberar el br");
+                System.out.println("No se pudo liberar el recurso");
             }
         }
     }
