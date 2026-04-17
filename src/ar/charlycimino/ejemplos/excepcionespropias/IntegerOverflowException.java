@@ -1,6 +1,8 @@
 
 package ar.charlycimino.ejemplos.excepcionespropias;
 
+import java.io.Serial;
+
 /**
  *
  * @author Charly Cimino
@@ -8,6 +10,8 @@ package ar.charlycimino.ejemplos.excepcionespropias;
  * Encontrá más código en mi repo de GitHub: https://github.com/CharlyCimino
  */
 public class IntegerOverflowException extends RuntimeException {
+    @Serial
+    private static final long serialVersionUID = 1L;
 
     public IntegerOverflowException() {
     }
